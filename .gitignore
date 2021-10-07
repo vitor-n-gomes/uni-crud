@@ -1,0 +1,6 @@
+/back/vendor
+/back/.idea
+/back/Homestead.json
+/back/Homestead.yaml
+/back/.env
+/back/.phpunit.result.cache
