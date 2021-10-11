@@ -15,11 +15,16 @@ class Employee extends Migration
     {
         Schema::create('employees', function (Blueprint $table) {
             $table->bigIncrements('id');
-            $table->foreign('user_id')->references('id')->on('users');
+            $table->bigInteger('user_id');
             $table->string('occupation');
-            $table->enum('status', ['hired', 'fired']);
+            $table->boolean('status');
             $table->timestamps();
         });
+        /*
+        Schema::table('employees', function($table) {
+            $table->foreign('user')->references('id')->on('users');
+        });
+        */
     }
 
     /**

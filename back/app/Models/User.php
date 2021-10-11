@@ -55,4 +55,12 @@ class User extends Model implements AuthenticatableContract, AuthorizableContrac
     {
         return [];
     }
+
+    /**
+     * Get the employees
+     */
+    public function employee()
+    {
+        return $this->hasMany(Employee::class, 'user_id', 'id');
+    }
 }
