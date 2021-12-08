@@ -5,7 +5,10 @@ namespace App\Models;
 use Illuminate\Database\Eloquent\Model;
 
 class Todo extends Model
-{
+{   
+    /**
+     * Fields on table um 
+     */
     protected $fillable = ['id', 'owner_id', 'in_charge_id', 'description', 'done'];
 
     /**
